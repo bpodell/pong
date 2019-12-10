@@ -10,6 +10,15 @@ canvas.width = width;
 canvas.height = height;
 var context = canvas.getContext('2d');
 
+var update = function() {
+
+}
+
+var render = function() {
+    context.fillStyle = "#FF00FF";
+    context.fillRect(0, 0, width, height);
+}
+
 var step = function() {
     update();
     render();
