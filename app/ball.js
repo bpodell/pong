@@ -1,4 +1,4 @@
-function Ball(x, y) {
+export function Ball(x, y) {
     this.x = x;
     this.y = y;
     this.x_speed = 0;

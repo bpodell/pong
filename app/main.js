@@ -1,3 +1,6 @@
+import { Player, Computer } from "./paddle";
+import { Ball } from "./ball";
+
 var animate = window.requestAnimationFrame ||
     window.webkitRequestAnimationFrame ||
     window.mozRequestAnimationFrame ||
@@ -10,6 +13,11 @@ canvas.width = width;
 canvas.height = height;
 var context = canvas.getContext('2d');
 
+var player = new Player();
+var computer = new Computer();
+var ball = new Ball(200, 300);
+
+
 var update = function() {
 
 }
@@ -17,6 +25,9 @@ var update = function() {
 var render = function() {
     context.fillStyle = "#FF00FF";
     context.fillRect(0, 0, width, height);
+    player.render();
+    computer.render();
+    ball.render();
 }
 
 var step = function() {
@@ -26,6 +37,6 @@ var step = function() {
 }
 
 window.onload = function() {
-    this.document.body.appendChild(canvas);
-    this.animate(step)
+    document.body.appendChild(canvas);
+    animate(step)
 }
