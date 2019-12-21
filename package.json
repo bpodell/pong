@@ -5,7 +5,8 @@
   "main": "pong.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -20,9 +21,13 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
-    "webpack-cli": "^3.3.10"
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.17.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
   },
   "dependencies": {
+    "babel-eslint": "^10.0.3",
     "webpack": "^4.41.2"
   }
 }

@@ -11,7 +11,7 @@ var width = 400;
 var height = 600;
 canvas.width = width;
 canvas.height = height;
-var context = canvas.getContext('2d');
+export var context = canvas.getContext('2d');
 
 var player = new Player();
 var computer = new Computer();
@@ -23,6 +23,7 @@ var update = function() {
 }
 
 var render = function() {
+    console.log('main render')
     context.fillStyle = "#FF00FF";
     context.fillRect(0, 0, width, height);
     player.render();

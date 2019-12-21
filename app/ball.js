@@ -1,3 +1,5 @@
+import {context} from './main';
+
 export function Ball(x, y) {
     this.x = x;
     this.y = y;
@@ -7,6 +9,7 @@ export function Ball(x, y) {
 }
 
 Ball.prototype.render = function() {
+    console.log('ball render')
     context.beginPath();
     context.arc(this.x, this.y, this.radius, 2 * Math.PI, false);
     context.fillStyle = "#000000";

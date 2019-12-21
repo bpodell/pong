@@ -1,3 +1,5 @@
+import {context} from './main';
+
 function Paddle(x,y, width, height) {
     this.x = x;
     this.y = y;
@@ -8,6 +10,7 @@ function Paddle(x,y, width, height) {
 }
 
 Paddle.prototype.render = function() {
+    console.log('paddle render')
     context.fillStyle = "#0000FF";
     context.fillRect(this.x, this.y, this.width, this.height);
 }
